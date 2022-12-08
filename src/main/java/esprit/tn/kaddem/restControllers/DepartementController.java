@@ -30,12 +30,21 @@ public class DepartementController {
     }
 
     @GetMapping("/getone")
-    public Departement retrieveDepartement(@PathParam("id") long idDepartement){
+    public Departement retrieveDepartement(@PathParam("id") Integer idDepartement){
         return iDepartementService.getById(idDepartement);
     }
 
     @DeleteMapping("/delete")
-    public void deleteDepartement(@PathParam("id") long idDepartement){
+    public void deleteDepartement(@PathParam("id") Integer idDepartement){
         iDepartementService.removeDepartement(idDepartement);
+    }
+    @PostMapping ("/assign/{id}/{idDepartement}")
+    public void addAndAssignDepartement(@PathVariable int idUniversite,@PathVariable int idDepartement) {
+        iDepartementService.assignUniversiteToDepartement(idUniversite,idDepartement);
+    }
+
+    @GetMapping("/retriveDepByUniv/{idUniversity}")
+    public List<Departement> retrieveDepartementByUniversity(@PathVariable Integer idUniversity){
+        return iDepartementService.retrieveDepartementsByUniversite(idUniversity);
     }
 }

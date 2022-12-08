@@ -22,7 +22,7 @@ public class EquipeServiceImp implements IEquipeService{
     }
 
     @Override
-    public Equipe getById(long IdEquipe) {
+    public Equipe getById(Integer IdEquipe) {
         return equipeRepository.findById(IdEquipe).orElse(null);
     }
 
@@ -32,7 +32,7 @@ public class EquipeServiceImp implements IEquipeService{
     }
 
     @Override
-    public void removeEquipe(long IdEquipe) {
+    public void removeEquipe(Integer IdEquipe) {
     equipeRepository.deleteById(IdEquipe);
     }
 }

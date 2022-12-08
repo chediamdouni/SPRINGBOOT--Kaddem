@@ -16,7 +16,7 @@ import java.util.Set;
 public class Equipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEquipe;
+    private Integer idEquipe;
     private String nomEquipe;
     private Niveau niveau;
     @OneToOne

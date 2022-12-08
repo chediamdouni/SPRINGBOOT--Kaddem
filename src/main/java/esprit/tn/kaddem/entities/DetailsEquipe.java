@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class DetailsEquipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idDetailsEquipe;
+    private Integer idDetailsEquipe;
     private int salle;
     private String thematique;
     @OneToOne(mappedBy = "equipeDetails")

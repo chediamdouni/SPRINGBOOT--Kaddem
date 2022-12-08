@@ -25,12 +25,12 @@ public class EquipeController {
     }
 
     @GetMapping("/getone")
-    public Equipe retieveEquipe(@PathParam("id") long idEquipe){
+    public Equipe retieveEquipe(@PathParam("id") Integer idEquipe){
         return iEquipeService.getById(idEquipe);
     }
 
     @DeleteMapping("/delete")
-    public void removeEquipe(@PathParam("id") long idEquipe){
+    public void removeEquipe(@PathParam("id") Integer idEquipe){
         iEquipeService.removeEquipe(idEquipe);
     }
 }

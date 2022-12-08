@@ -16,7 +16,7 @@ import java.util.Set;
 public class Universite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idUniversite;
+    private Integer idUniversite;
     private String nomUniversite;
     @OneToMany(cascade = CascadeType.ALL)
     private Set<Departement> Departements;

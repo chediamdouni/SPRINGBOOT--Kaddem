@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
-
+@RequestMapping("/universite")
 @RestController
 public class UniversiteController {
     @Autowired
@@ -29,12 +29,12 @@ public class UniversiteController {
     }
 
     @GetMapping ("/getOne")
-    public Universite retrieveUniversite(@PathParam("id") long idUniversite){
+    public Universite retrieveUniversite(@PathParam("id") Integer idUniversite){
         return  iUnivresiteService.getById(idUniversite);
     }
 
     @DeleteMapping("/delete")
-    public void removeUniversite(@PathParam("id") long idUniversite){
+    public void removeUniversite(@PathParam("id") Integer idUniversite){
         iUnivresiteService.removeUniversite(idUniversite);
     }
 }

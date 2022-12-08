@@ -22,7 +22,7 @@ public class UniversiteServiceImp implements IUniversiteService {
     }
 
     @Override
-    public Universite getById(long IdUniversite) {
+    public Universite getById(Integer IdUniversite) {
         return universiteRepository.findById(IdUniversite).orElse(null);
     }
 
@@ -32,7 +32,7 @@ public class UniversiteServiceImp implements IUniversiteService {
     }
 
     @Override
-    public void removeUniversite(long IdUniversite) {
+    public void removeUniversite(Integer IdUniversite) {
         universiteRepository.deleteById(IdUniversite);
     }
 }

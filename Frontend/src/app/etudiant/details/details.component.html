@@ -1,0 +1,30 @@
+<div>
+    <h1>Etudiant:</h1>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-bordered mb-0">
+            <thead>
+                <tr>
+                    <td scope="col">Id : {{etudiant.idEtudiant}}</td>
+                </tr>
+            </thead>
+            <tbody >
+                <tr>
+                    <td scope="col">Nom : {{etudiant.nomE}}</td>
+                </tr>
+                <tr>
+                    <td scope="col">Date Embauche : {{etudiant.prenomE}}</td>
+                </tr>
+                <tr>
+                    <td> Actions :
+                        <button type="button" class="btn btn-warning add-btn" [routerLink]= "['/etudiant/update', etudiant.idEtudiant]" >Update</button>
+                        <button type="button" class="btn btn-danger add-btn" (click)="removeEtudiant()">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary add-btn" (click)="returnHome()">Return Home</button>
+</div>

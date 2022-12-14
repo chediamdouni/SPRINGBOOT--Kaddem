@@ -82,17 +82,8 @@ public class EtudiantServiceImp implements IEtudiantServices {
         Equipe equipe = equipeRepository.findById(idEquipe).orElse(null);
         contrat.setEtudiant(e);
         equipe.getEtudiants().add(e);
-
-/*        e.setEquips(new HashSet<Equipe>());
-        e.getEquips().add(equipe);*/
-
-        //try
-        //e.getEquips().add(equipe);
-        //e.getContrats().add(contrat);
-
         return etudiantRepository.save(e);
     }
-
     @Override
     public Set<Etudiant> getEtudiantByDepartement(Integer idDepartement) {
         Departement dep = departementRepository.findById(idDepartement).orElse(null);

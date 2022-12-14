@@ -4,6 +4,7 @@ import tn.esprit.kaddem.entities.Departement;
 import tn.esprit.kaddem.entities.Option;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public interface IDepartementServices {
@@ -21,6 +22,7 @@ public interface IDepartementServices {
     List<Departement> retrieveDepartementByOptionEtudiant(Option op);
 
      Set<Departement> retrieveDepartementByUniversite(Integer idUniversite);
+    Map<Option, Long> getRepartitionEtudiantsParDepartement(Integer idDepart);
 
 
 }

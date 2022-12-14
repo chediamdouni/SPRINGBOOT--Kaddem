@@ -12,7 +12,8 @@
     <artifactId>Kaddem</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Kaddem</name>
-    <description>projet qui vise à encourager les jeunes étudiants à améliorer leurs compétences professionnelles
+    <description>
+        projet qui vise à encourager les jeunes étudiants à améliorer leurs compétences professionnelles
     </description>
     <properties>
         <java.version>1.8</java.version>

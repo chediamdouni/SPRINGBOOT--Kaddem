@@ -34,4 +34,5 @@ public class Contrat implements Serializable {
 
     @ManyToOne
     Etudiant etudiant;
+
 }

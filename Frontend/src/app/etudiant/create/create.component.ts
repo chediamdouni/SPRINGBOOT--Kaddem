@@ -10,7 +10,7 @@ import { EtudiantService } from 'src/app/service/etudiant.service';
 })
 export class CreateComponent implements OnInit{
   
-  etudiant: Etudiant = new Etudiant;
+  etudiant: Etudiant
 
 
   constructor(

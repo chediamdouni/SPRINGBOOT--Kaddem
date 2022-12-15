@@ -9,9 +9,9 @@ import { EtudiantService } from 'src/app/service/etudiant.service';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit{
-  etudiant: Etudiant = new Etudiant;
-
-  id: number | undefined ;
+  
+  etudiant: Etudiant
+  id: number 
 
   constructor(
     private etudiantService: EtudiantService,

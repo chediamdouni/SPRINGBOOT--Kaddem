@@ -1,1 +1,34 @@
-<p>update works!</p>
+<form #f="ngForm">
+    <div class="form-group col-md-6">
+      <label>Nom Etudiant :</label>
+      <input type="text" [(ngModel)]="etudiant.nomE" name="nomE"
+      class="form-control" required minlength="3"
+       #t="ngModel" />
+      <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+          <div *ngIf="t.hasError('required')">this field is required</div>
+          <div *ngIf="t.hasError('minlength')">minlength = 3!</div>
+      </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <label>Prenom Etudiant :</label>
+        <input type="text" [(ngModel)]="etudiant.prenomE" name="prenomEtudiant" 
+        class="form-control" required minlength="3"
+         #t="ngModel" />
+        <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+            <div *ngIf="t.hasError('required')">this field is required</div>
+            <div *ngIf="t.hasError('minlength')">minlength = 3!</div>
+        </div>
+    </div>
+
+    <br>
+    <button class="btn btn-success" (click)="updateEtudiant()"
+    [disabled]="f.invalid">
+      save
+    </button>
+    &nbsp;
+    <button type="reset" class="btn btn-warning">
+      reset
+    </button>
+  </form>
+  

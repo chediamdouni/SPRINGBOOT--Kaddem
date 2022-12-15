@@ -1,5 +1,5 @@
 export class Etudiant {
-    idEtudiant!: number
-    nomE!: string
-    prenomE!: string 
+    idEtudiant: number
+    nomE: string
+    prenomE: string 
 }

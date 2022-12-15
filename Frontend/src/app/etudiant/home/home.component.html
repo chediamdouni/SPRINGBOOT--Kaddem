@@ -1,1 +1,32 @@
-<p>home works!</p>
+<div>
+    <h1>Etudiant :</h1>
+    <button type="button" class="btn btn-primary add-btn" [routerLink]="['/etudiant/create/']">Ajouter Etudiant</button>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-bordered mb-0">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let etudiants of etudiant">
+                    <th scope="row">{{etudiants.idEtudiant}}</th>
+                    <td>{{etudiants.nomE}}</td>
+                    <td>{{etudiants.prenomE}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-primary add-btn" [routerLink]="['/etudiant/details/', etudiants.idEtudiant]">Details</button>
+                        <button type="button" class="btn btn-warning add-btn" [routerLink]="['/etudiant/update/', etudiants.idEtudiant]">Update</button>
+                        <button type="button" class="btn btn-danger add-btn" (click)="removeEtudiant(etudiants)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

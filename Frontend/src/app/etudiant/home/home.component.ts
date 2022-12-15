@@ -8,7 +8,7 @@ import { EtudiantService } from 'src/app/service/etudiant.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  etudiant: Etudiant[] = [];
+  etudiant: Etudiant[];
 
   constructor(
     private etudiantService: EtudiantService,

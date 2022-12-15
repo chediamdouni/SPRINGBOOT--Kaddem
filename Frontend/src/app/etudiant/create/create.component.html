@@ -12,7 +12,7 @@
 
     <div class="form-group col-md-6">
         <label>Prenom Etudiant  :</label>
-        <input type="text" [(ngModel)]="etudiant.prenomE" name="prenomEncadrant" 
+        <input type="text" [(ngModel)]="etudiant.prenomE" name="prenomE" 
         class="form-control" required minlength="3"
          #t="ngModel" />
         <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
